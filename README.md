@@ -29,12 +29,12 @@ Steps -
 ### How to run the program
 
 1. Clone the repo, build the program using `$ cargo build --release`.
-2. Run the program - `$ ./target/release/chingari_assignment -s 2022-11-13 -e 2022-11-14`.
+2. Run the program - `$ ./target/release/chingari_assignment -s 2022-11-13 -e 2022-12-14`.
 3. Argument `-s` is the start date and `-e` is end date.
 4. Or download the build file from relases tab form github repo and do the step 2.
 
 ```
-$ ./target/debug/chingari_assignment -s 2022-11-13 -e 2022-11-14
+$ ./target/debug/chingari_assignment -s 2022-11-13 -e 2022-12-14
 ...
 ...
 ...
