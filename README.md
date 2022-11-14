@@ -1,6 +1,6 @@
 # Chingari Assignment
 
-### Problem Statement - 
+### Problem Statement
 
 Fetch all the gari token `(CKaKtYvz6dKPyMvYq9Rh3UBrnNqYZAyd7iF4hJtjUvks)` related transactions, filter the transactions according to the start date and end date i.e the transaction date should be between start date and end date. From the transactions parse the *new user* whose pre balance < 0.0 and post balance > 0.0
 
