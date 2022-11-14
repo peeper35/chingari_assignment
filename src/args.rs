@@ -6,6 +6,7 @@ use error::AssignmentError;
 
 #[derive(Parser, Debug)]
 #[command(version, about)]
+// added ParsedData struct; derived clap's parser trait to get cli argument data
 pub struct ParsedData {
     #[arg(short, long, value_name = "START_DATE")]
     start_date: String,
@@ -14,6 +15,7 @@ pub struct ParsedData {
 }
 
 impl ParsedData {
+    // implemented parse_data_to_date() method to parse the cli string date to an actual NaiveDate object
     pub fn parse_data_to_date(&self) -> Result<(NaiveDate, NaiveDate), AssignmentError> {
         Ok((
             NaiveDate::parse_from_str(&self.start_date, "%Y-%m-%d")?,

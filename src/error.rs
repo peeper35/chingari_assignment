@@ -4,6 +4,9 @@ use solana_sdk::{pubkey::ParsePubkeyError, signature::ParseSignatureError};
 use thiserror::Error;
 
 #[derive(Error, Debug)]
+// added errors related to the program
+// wrapped few error types into the AssignmentError
+// used thiserror
 pub enum AssignmentError {
     #[error("Unable to parse the date from String")]
     StringToDateParseError(#[from] chrono::format::ParseError),
