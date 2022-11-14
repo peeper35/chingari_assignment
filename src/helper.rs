@@ -105,11 +105,11 @@ pub fn get_data_out_of_option_serializer(
 pub fn check_new_user(
     data: &EncodedConfirmedTransactionWithStatusMeta,
 ) -> Result<Option<NewUserData>, AssignmentError> {
-    let (pre_token_balances, post_token_balances) = get_data_out_of_option_serializer(&data)?;
+    let (pre_token_balances, post_token_balances) = get_data_out_of_option_serializer(data)?;
 
     // check if there is no pre_token_balance
     // and post_token_balance is 0.000000001
-    if pre_token_balances.len() == 0 && post_token_balances.len() == 1 {
+    if pre_token_balances.is_empty() && post_token_balances.len() == 1 {
         // get the ATA owner
         let post_bal_owner = match &post_token_balances[0].owner {
             OptionSerializer::Some(val) => val,
