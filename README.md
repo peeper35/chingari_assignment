@@ -11,9 +11,9 @@ Whenever someone downloads the Chingari android application and signs up. A new 
 That is we can check if new user has signed up on chingari.
 
 Steps - 
-    - Create a wellet - (1) for user (Keypair)
-    - Create a gari token ATA (2) for wallet (1)
-    - Airdrop 0.000000001 gari token to their gari token ATA
+* Create a wellet - (1) for user (Keypair)
+* Create a gari token ATA (2) for wallet (1)
+* Airdrop 0.000000001 gari token to their gari token ATA
 
 ### How do we check new users from solana transactions.
 
