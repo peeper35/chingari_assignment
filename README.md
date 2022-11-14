@@ -48,3 +48,11 @@ Execution time of the program for the debug build ^
 Release build will be much faster.
 
 I have used the nonblocking `RpcClient` and async/await paradigm to make the execution as much faster as it can be. 
+
+# Note 
+
+This program fetch the last 1000 signatures related to the gari token, gari token has 1000 and 1000's of signatures each day. But the RpcClient can only give us around 1000 recent signatures (1) at a time. If want to get older signature you have to pass (1)'s last signature (2) into the Rpc call (`get_signatures_for_address_with_config()`) in this call you need to pass `before: last signature (2)` to get older signatures than (1).
+
+If you repeat this process two times then you will get 2000 signatures, if repeated 3 times then 3000 signatures so on and so forth.
+
+If suppose we entered a very historical date, such as few months back start_date and end_date then, the program needs to get a lots of signatures, so it will take a lots of time, also a lots of io operations as well. So I have not implemented that.
